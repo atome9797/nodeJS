@@ -27,6 +27,7 @@ var candyMachine = {
 }
 
 const { getCandy, status: { count } } = candyMachine;
-getCandy.call(candyMachine); //이렇게 호출하면 this를 찾지 못한다
 console.log(count); // 여전히 4가 된다.
+getCandy.call(candyMachine); //이렇게 호출하면 this를 찾지 못한다
+
 
