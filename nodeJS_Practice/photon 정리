@@ -1,0 +1,24 @@
+[photonNetwork] 
+
+- 포톤과 관련된 여러 가지 기능을 제공
+    - 매치매이킹/ 방 설정 / 방 접속 등등
+- API 
+    - ConnectUsingSettings() : 매치 메이킹 서버에 접속한다.
+        - PhotonServerSettings 스크립터블 오브젝트에서 서버와 관련된 여러 가지 데이터 설정 가능
+        - JoinRandomRoom () : 현재 접속 가능한 방 중 임의로 접속한다.
+        - LoadLevel () : 방에 있는 모든 클라이언트를 특정 씬으로 이동시킨다.
+        - CreateRoom () : 방을 생성한다.
+
+[MonoBehaviorPunCallbacks]
+
+- MonoBehavior에  PUN 과 관련괸 콜백 메소드를 제공
+
+[PhotonView]
+
+- 방에 있는 여러 게임 오브젝트 중 로컬과 리모트를 구분하고, 데이터 동기화 기능을 제공
+- 데이터 동기화는 [IPunObservable.OnPhotonSerializeView()]
+- 기본 제공 컴포넌트
+    - [PhotonTransformView()] : 트랜스폼의 동기화 제공
+    - [PhotonAnimatorView()] : 애니메이션 동기화 제공
+    - [PhotonRigidBodyView()]  : 리지드바디 동기화 제공
+    - [MonoBehaviorPun()]  : PhotonView 제공
